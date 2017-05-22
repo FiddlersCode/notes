@@ -19,10 +19,13 @@
       if (a === b) {
         throw new Error("Assertion failed: " + a + " is equal to " + b);
       }
+    },
+    anInstanceOf: function(object, constructor) {
+      if (object instanceof constructor !== true) {
+        throw new Error("Assertion failed: " + object + " is not an instance of "
+        + constructor)
+      }
     }
   };
   exports.assert = assert;
 })(this);
-
-expect(countModel instanceof Countmodel).toBe(true)
-assert.instanceof(countModel,Countmodel)
