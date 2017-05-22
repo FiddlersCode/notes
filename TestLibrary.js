@@ -20,10 +20,10 @@
         throw new Error("Assertion failed: " + a + " is equal to " + b);
       }
     },
-    anInstanceOf: function(object, constructor) {
+    isConstructedFrom: function(object, constructor) {
       if (object instanceof constructor !== true) {
-        throw new Error("Assertion failed: " + object + " is not an instance of "
-        + constructor)
+        throw new Error("Assertion failed: " + object +
+                        " is not an instance of " + constructor);
       }
     }
   };

@@ -1,2 +1,4 @@
-var testLibrary = require(./TestLibrary);
-var notes = require(./note-model);
+(function() {
+  var note = new Note();
+  assert.isConstructedFrom(note, Note);
+})();
