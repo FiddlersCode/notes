@@ -6,8 +6,8 @@ NotePad.prototype.addNote = function(note) {
   this._notes.push(note);
 };
 
-NotePad.prototype.getNote = function() {
-  return this._notes[0];
+NotePad.prototype.getNote = function(noteIndex) {
+  return this._notes[noteIndex];
 };
 
 NotePad.prototype.getAllNotes = function() {

@@ -6,8 +6,8 @@
 
   assert.isConstructedFrom(notepad, NotePad);
   notepad.addNote(note);
-  assert.isConstructedFrom(notepad.getNote(), Note);
-  assert.isEqual(notepad.getNote().text(),'positive');
+  assert.isConstructedFrom(notepad.getNote(0), Note);
+  assert.isEqual(notepad.getNote(0).text(),'positive');
   console.log('Unit test passed');
 })();
 
@@ -35,5 +35,5 @@
   notepad = new NotePad();
   notepad.createNote('yolo');
   assert.isEqual(notepad.getAllNotes().length, 1);
-  assert.isEqual(notepad.getNote().text(), 'yolo');
+  assert.isEqual(notepad.getNote(0).text(), 'yolo');
 })();
