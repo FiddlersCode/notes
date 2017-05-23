@@ -2,10 +2,10 @@
   console.log('Unit test: NotePad can store and retrieve a note');
   var notepad, note;
   notepad = new NotePad();
-  note = new Note('positive');
+  // note = new Note('positive');
 
   assert.isConstructedFrom(notepad, NotePad);
-  notepad.addNote(note);
+  notepad.createNote('positive');
   assert.isConstructedFrom(notepad.getNote(0), Note);
   assert.isEqual(notepad.getNote(0).text(),'positive');
   console.log('Unit test passed');
@@ -19,7 +19,7 @@
 
   var addNotes = function(note, n) {
     for (var i = 0; i < n; i++) {
-        notepad.addNote(note);
+        notepad.createNote(note);
     }
   };
 

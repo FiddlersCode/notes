@@ -2,10 +2,6 @@ function NotePad() {
   this._notes = [];
 }
 
-NotePad.prototype.addNote = function(note) {
-  this._notes.push(note);
-};
-
 NotePad.prototype.getNote = function(noteIndex) {
   return this._notes[noteIndex];
 };
