@@ -1,10 +1,10 @@
 (function(exports) {
   function NotePadViewer() {
-    this._notesHTML = ['<ul><li><div>hi</div></li></ul>'];
+    this._notesHTML = [];
   }
 
-  NotePadViewer.prototype.displayNotesHTML = function (){
-    return '<ul><li><div>hi</div></li></ul>';
+  NotePadViewer.prototype.displayNotesHTML = function(string){
+    return `<ul><li><div>${string}</div></li></ul>`
   };
 
   exports.NotePadViewer = NotePadViewer;

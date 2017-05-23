@@ -7,12 +7,14 @@
 
 (function() {
   console.log('Unit test: NotePadViewer displays outputs notes in HTML');
-  var notepadviewer, notepadmodel;
+  var notepadviewer, notepadmodel, note;
 
-  var notepadmodel = new NotePad();
-  var notepadviewer = new NotePadViewer();
+  var notepad_model = new NotePad();
+  var notepad_viewer = new NotePadViewer();
 
-  notepadmodel.createNote("hi");
-  notepadmodel.createNote("bye");
-  assert.isEqual('<ul><li><div>hi</div></li></ul>', notepadviewer.displayNotesHTML());
+  notepad_model.createNote("hi");
+
+  note = notepad_model.getNote(0);
+
+  assert.isEqual('<ul><li><div>hi</div></li></ul>', notepad_viewer.displayNotesHTML(note.text()));
 })();
