@@ -28,3 +28,12 @@
   assert.isEqual(notepad.getAllNotes().length, 5);
   console.log('Unit test passed');
 })();
+
+(function() {
+  console.log('Unit test: NotePad can create a new note and add it to the ._notes array');
+  var notepad;
+  notepad = new NotePad();
+  notepad.createNote('yolo');
+  assert.isEqual(notepad.getAllNotes().length, 1);
+  assert.isEqual(notepad.getNote().text(), 'yolo');
+})();

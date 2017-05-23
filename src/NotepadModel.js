@@ -13,3 +13,8 @@ NotePad.prototype.getNote = function() {
 NotePad.prototype.getAllNotes = function() {
   return this._notes;
 };
+
+NotePad.prototype.createNote = function(text) {
+  var note = new Note(text);
+  this._notes.push(note);
+};
