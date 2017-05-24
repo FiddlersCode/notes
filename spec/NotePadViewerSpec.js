@@ -33,3 +33,14 @@
   assert.isEqual(notepad_viewer.displayAll(notepad_model), '<ul><li><div>Yo</div></li><li><div>Bonga</div></li></ul>');
 
 })();
+
+(function() {
+  console.log('Unit test: NotePadViewer can handle empty notes');
+
+  var notepad_viewer, notepad_model;
+
+  notepad_model = new NotePad();
+  notepad_viewer = new NotePadViewer();
+
+  assert.isEqual(notepad_viewer.displayAll(notepad_model), '<ul><li><div>no notes to display</div></li></ul>');
+})();
