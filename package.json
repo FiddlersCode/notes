@@ -1,0 +1,23 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "app for notes",
+  "main": "TestLibrary.js",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmuldoon86/notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmuldoon86/notes/issues"
+  },
+  "homepage": "https://github.com/pmuldoon86/notes#readme"
+}
