@@ -6,9 +6,9 @@
     this.view = notePadViewer.displayAll(notePad);
   }
 
-  NoteController.prototype.changeGreeting = function () {
+  NoteController.prototype.changeGreeting = function (text) {
     var elem = document.getElementById("app");
-    elem.textContent = this.view;
+    elem.textContent = text;
   };
 
   exports.NoteController = NoteController;
