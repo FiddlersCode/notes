@@ -16,7 +16,7 @@
 
   note = notepad_model.getNote(0);
 
-  assert.isEqual('<ul><li><div>hi</div></li></ul>', notepad_viewer.wrapNote(note.text()));
+  assert.isEqual('<li><div>hi</div></li>', notepad_viewer.wrapNote(note.text()));
 })();
 
 (function() {
@@ -30,6 +30,6 @@
   notepad_model.createNote("Yo");
   notepad_model.createNote("Bonga");
 
-  assert.isEqual(notepad_model.displayAll(),
+  assert.isEqual(notepad_viewer.displayAll(notepad_model), '<ul><li><div>Yo</div></li><li><div>Bonga</div></li></ul>');
 
 })();

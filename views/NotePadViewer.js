@@ -3,7 +3,17 @@
   }
 
   NotePadViewer.prototype.wrapNote = function(string){
-    return `<ul><li><div>${string}</div></li></ul>`
+    return `<li><div>${string}</div></li>`;
+  };
+
+  NotePadViewer.prototype.displayAll = function(notePad) {
+    var htmlNotes = ['<ul>'];
+    notePad._notes.forEach(function(notes) {
+      console.log(this.NotePadViewer);
+      htmlNotes.push(this.NotePadViewer.wrapNote(notes));
+    });
+    htmlNotes.push('</ul>');
+    return htmlNotes.join("");
   };
 
   exports.NotePadViewer = NotePadViewer;
