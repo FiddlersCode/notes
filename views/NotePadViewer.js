@@ -9,12 +9,17 @@
   NotePadViewer.prototype.displayAll = function(notePad) {
     var htmlNotes = ['<ul>'];
     var notePadViewer = this;
-    notePad._notes.forEach(function(notes) {
-      htmlNotes.push(notePadViewer.wrapNote(notes.text()));
-    });
-    htmlNotes.push('</ul>');
-    return htmlNotes.join("");
-  };
+    if (notePad._notes.length >= 1) {
+      notePad._notes.forEach(function(notes) {
+        htmlNotes.push(notePadViewer.wrapNote(notes.text()));
+      });
+    } else {htmlNotes.push(notePadViewer.wrapNote("no notes to display"));
+  }
 
-  exports.NotePadViewer = NotePadViewer;
+  htmlNotes.push('</ul>');
+  return htmlNotes.join("");
+
+};
+
+exports.NotePadViewer = NotePadViewer;
 })(this);
