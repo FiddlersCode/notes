@@ -1,12 +1,14 @@
 (function(exports) {
-  function changeGreeting(text) {
-    console.log(text);
-    var elem = document.getElementById("app");
-    elem.textContent = text;
-    console.log(elem);
-    console.log(elem.textContent);
-
+  function NoteController(notepad) {
+    var notePad = notepad;
+    notePad.createNote("test note");
+    this.view = NotePadViewer.displayAll(notePad);
   }
 
-  exports.changeGreeting = changeGreeting;
+  NoteController.prototype.changeGreeting = function () {
+    var elem = document.getElementById("app");
+    elem.textContent = this.view;
+  }
+
+  exports.NoteController = NoteController;
 })(this);
