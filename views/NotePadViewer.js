@@ -1,9 +1,8 @@
 (function(exports) {
   function NotePadViewer() {
-    this._notesHTML = [];
   }
 
-  NotePadViewer.prototype.displayNotesHTML = function(string){
+  NotePadViewer.prototype.wrapNote = function(string){
     return `<ul><li><div>${string}</div></li></ul>`
   };
 
